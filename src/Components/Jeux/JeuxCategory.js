@@ -6,11 +6,6 @@
 import React ,{Component} from 'react';
 
 class Jeuxcategory extends Component{
-    constructor (props){
-        super(props);
-        
-    }
-    
     render(){
         return(
            <tr>
@@ -18,8 +13,7 @@ class Jeuxcategory extends Component{
                   {this.props.category}
                </th>
            </tr> 
-           
-        )
+           )
     }
    
 }

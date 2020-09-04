@@ -5,15 +5,34 @@ import {PureCompo,PureCompoProps} from './Components/PureCompo';
 import StateCompo from './Components/StateCompo';
 /*import CompoCycleDeVie from './Components/CompoCycleDeVie';*/
 import FilterableJeuxTable from './Components/Jeux/FilterableJeuxTable';
+import Contacts from './Components/Jeux/contacts';
+import Images from './Components/Jeux/images';
+import Posts from './Components/Jeux/posts';
+import Users from './Components/Jeux/users';
+import Countries from './Components/Jeux/covidCountries';
+import Totalcovid from './Components/Jeux/covidWorld';
 
 
-
-
+/*const obj = {  
+  method: 'GET',
+  apikey:'NmRdJs66nJQ02HpVK-N69K4R2MaNvhaou8nBHC1EeledUkpA',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  
+  }
+}*/
 class App extends Component {
   constructor(props){
       super(props);
       this.state = {
-        stateApp : ""
+        stateApp : "",
+        contacts: [],
+        images:[],
+        posts:[],
+        users:[],
+        countries:[],
+        allworlds:[]
       }
   }
 
@@ -25,18 +44,72 @@ class App extends Component {
     this.setState({stateApp:val});
     console.log("val dans APP ->" + val)
   }
+  /*
+  
+  componentWillMount() {
+    fetch('http://jsonplaceholder.typicode.com/photos')
+    .then(res => res.json())
+    .then((data) => {
+      console.log(data);
+      this.setState({ images: data })
+    })
+    .catch(console.log)
+  }
+  
+  UNSAFE_componentWillMount() {
+    fetch('http://jsonplaceholder.typicode.com/posts')
+    .then(res => res.json())
+    .then((data) => {
+      console.log(data);
+      this.setState({ posts: data })
+    })
+    .catch(console.log)
+  }
+ */
+/* componentDidMount() {
+  fetch('http://jsonplaceholder.typicode.com/users')
+  .then(res => res.json())
+  .then((data) => {
+    console.log(data);
+    this.setState({ contacts: data })
+  })
+  .catch(console.log)
+}
+*/
+componentDidMount(){
+    const url = 'https://api.currentsapi.services/v1/search?' +
+    'keywords=Amazon&language=en&' +
+    'apiKey=NmRdJs66nJQ02HpVK-N69K4R2MaNvhaou8nBHC1EeledUkpA';
+    fetch(url)
+    .then(res => res.json())
+    .then((data) => {
+      console.log(data);
+      this.setState({ news : data })
+    });
+  }
+
+
+  componentDidMount() {
+    fetch('https://api.covid19api.com/summary')
+    .then(res => res.json())
+    .then((data) => {
+      console.log("covid data",data);
+      this.setState({ countries: data.Countries });
+      this.setState({ allworlds: data.Global });
+     
+    })
+    .catch(console.log)
+  }
+ 
+ 
   render(){
     
-
-
-    
-    
-    let mesLabels = [];
-    /*mesLabels.push("elisa");
-   mesLabels.push("elisa")
+     let mesLabels = [];
+    mesLabels.push("elisa");
+    mesLabels.push("elisa")
     mesLabels.push("léna")
     mesLabels.push("thibault")
-    mesLabels.push("féleen")*/
+    mesLabels.push("féleen")
     
     const JEUXPS3 = [];
 
@@ -91,31 +164,26 @@ class App extends Component {
     JEUXNEO.push({category:'Combat',name:'FatalFury3', Année:'1995',stocked :true ,genre:'Arcade',age:'12+',console:'NeoGeo'});
     JEUXNEO.push({category:'Guerre',name:'ShockTrooper2', Année:'1998',stocked :true ,genre:'Arcade',age:'7+',console:'NeoGeo'});
     
+    
+
     return(
       <div className="App">
       <header className="App-header">
-   
-      <PureCompo/>  
+      <img src={logo} className="App-logo" alt="logo" />
+      <PureCompo/>
+      <Totalcovid allworlds={this.state.allworlds}/>
+      <Countries countries={this.state.countries}/>
+      <Users users={this.state.users}/> 
+      <Contacts contacts={this.state.contacts}/>
+      <Posts posts={this.state.posts}/>
+      <Images images={this.state.images}/>
       <FilterableJeuxTable  
       jeux={JEUXPS3}
       jeux1={JEUXPS4}
       jeux2={JEUXNEO}
       />
-    
       
-
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         
-         {/*<CompoCycleDeVie/>*/}
+       {/*<CompoCycleDeVie/>*/}
          {mesLabels.map((libellé)=>
            <StateCompo key={libellé} label={libellé} onInputChange = {this.onInputChange}
              
@@ -127,18 +195,18 @@ class App extends Component {
      
       
          
-      <img src={logo} className="App-logo" alt="logo" />
-       { /* <p>
-          Edit Lud-ly ludo_Code <code>src/App.js</code> and save to reload.
+      
+        <p>
+          ludo_Code 2020<code>src/App.js</code> and save to reload.
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://ludovic-mouly.com"
           target="_blank"
           rel="noopener noreferrer">
           Learn React
         </a>
-        */}
+        
       </header>
     </div>
     )

@@ -41,7 +41,7 @@ class SearchCompo extends Component{
  }
     render(){
         return(
-            <div style={{"backgroundColor":"blue"}}>
+            <div>
 
               <input type="text"  placeholder="Search"
               text= {this.props.filterText}

@@ -18,7 +18,7 @@ class JeuxRow extends Component{
              name = this.props.jeu.name;
         }
         else{
-             name = <span style={{color:'orangered'}}>{this.props.jeu.name}</span>;
+             name = <span>{this.props.jeu.name}</span>;
         }
         return(
         

@@ -7,7 +7,7 @@ import React,{Component} from 'react';
 import './StateCompo.css';
 
 class StateCompo extends Component{
-    constructor(props){
+    constructor(props){ 
         super(props);
         console.log("label " + props.label);
         this.state = {nom : ''};

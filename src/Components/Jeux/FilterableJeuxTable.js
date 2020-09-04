@@ -16,9 +16,9 @@ class FilterableJeuxTable extends Component{
         console.log("liste des jeux" ,props.jeux)
         this.state = {
             filterText:'',
-            ps3Only:false,
-            ps4Only:false,
-            neoOnly:false
+            ps3Only:true,
+            ps4Only:true,
+            neoOnly:true
         }
         this.handleFiltertextChange = this.handleFiltertextChange.bind(this); 
         this.handlePs3InStockChange = this.handlePs3InStockChange.bind(this);
@@ -45,7 +45,7 @@ class FilterableJeuxTable extends Component{
     
     render(){
         return(
-            <div style={{"backgroundColor":"orangered","border":"solid 3px black"}}>FILTER GAME TABLE
+            <div style={{"border":"solid 3px black"}}>MY FILTER GAME TABLE
 
                 <SearchCompo 
                   filterText={this.state.filterText}

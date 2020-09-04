@@ -53,7 +53,7 @@ class JeuxTable extends Component{
                  rows.push(<JeuxCategory category={jeu.category}/>)
              }
                  
-             rows.push(<JeuxRow key={jeu.name} jeu={jeu}/>)
+             rows.push(<JeuxRow jeu={jeu}/>)
              lastCategory  = jeu.category;
              
          });
@@ -77,19 +77,19 @@ class JeuxTable extends Component{
       //rows.push(<JeuxRow key="2"/>);
         
         return(
-            <div style={{"backgroundColor":"black"}}><span style={{"color":"orangered"}}>-Choose your Console-</span>
-                <table>
+            <div><span >-Choose your Console-</span>
+                <table className="table">
                        <thead>
-                            <tr style={{"color":"green"}}>
+                            <tr>
                                 <th>Nom </th>
                                 <th>Genre </th>
-                                <th>Année </th>
+                                <th >Année </th>
                                 <th>Age </th>
                                 <th> Console </th>
                             </tr>
                         </thead>
                     <tbody>
-                    {rows}
+                   {rows}
                     </tbody>
                 </table>
             </div>

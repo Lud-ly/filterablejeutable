@@ -6,12 +6,11 @@
 import React from 'react';
 import './PureCompo.css';
 
-
  export function PureCompo(){
     return(
         
         <div>
-            <h1 className="pure-h1">MyGameFrame </h1>
+            <h1 className="pure-h1"> CEREBRAL-CLUB USERS</h1>
         </div>
     )
 }
