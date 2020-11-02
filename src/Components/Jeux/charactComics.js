@@ -1,19 +1,29 @@
 import React from 'react'
 
-const Heros = ({ posters }) => {
+const Comics = ({ comics, myComics }) => {
+
     return (
         <div>
             <center><h1>Characters Comics Events</h1></center>
-            {posters.map((poster) => (
+            {comics.map((comic) => (
                 <div className="card">
                     <div className="card-body">
-                       
-                       <img src={`${poster.thumbnail.path}.${poster.thumbnail.extension}`}alt="poster"/>
+                        <h1>{comic.name}</h1>
+                        <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="poster" />
+                        <p>{comic.description}</p>
+                        <p>{comic.comics.items.name}</p>
                     </div>
                 </div>
-            ))}
+            ))};
+            {/* {myComics.map((myComic) => (
+                <div>
+                    <h1>{myComics.name}</h1>
+                    <img src={`${myComic.resourceURI}`} alt="post" />
+                </div>
+
+            ))} */}
         </div>
     )
 };
 
-export default Heros
+export default Comics

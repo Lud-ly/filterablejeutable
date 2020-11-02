@@ -1,11 +1,8 @@
 .App {
   text-align: center;
 }
-.card-body{
-      left: 200%;
-}
 .App-logo {
-  height: 20vmin;
+  height: 10vmin;
   width: 20vmin;
   pointer-events: none;
   background-image: linear-gradient(#000,#fff);
@@ -26,12 +23,12 @@ h5,h6,p{
   height: 1px;
   background-color: #000;
 }
-.card-body{
+/* .card-body{
   background-color: #F2F2F2;
   width: 80%;
   margin: 0 auto;
   border-radius: 2%;
-}
+} */
 .profil-user{
   background-color: #F2F2F2!important;
 }

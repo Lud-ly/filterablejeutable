@@ -10,7 +10,7 @@ import Images from './Components/Jeux/images';
 import Posts from './Components/Jeux/posts';
 import Users from './Components/Jeux/users';
 import Countries from './Components/Jeux/covidCountries';
-import Posters from './Components/Jeux/charactComics';
+import Comics from './Components/Jeux/charactComics';
 import Totalcovid from './Components/Jeux/covidWorld';
 
 const myheader = new Headers({
@@ -42,7 +42,8 @@ class App extends Component {
       users: [],
       countries: [],
       allworlds: [],
-      posters:[]
+      comics:[],
+      myComics:[]
     }
   }
  
@@ -64,9 +65,10 @@ class App extends Component {
         const data = json;
         console.log('data api2', data.data.results);
         const comics = data.data.results;
-       
-       this.setState({ comics: comics });
-       // console.log("comics", posters);
+        const myComics = comics.comics.items;
+        this.setState({ myComics: myComics });
+        this.setState({ comics: comics });
+       console.log("mycomics", myComics);
       })
       .catch(error => console.log(error)) // error json
       .catch(error => console.log(error)); // error API
@@ -139,7 +141,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <PureCompo />
-          <Posters posters={this.state.posters}/>
+          <Comics comics={this.state.comics}/>
           <Totalcovid allworlds={this.state.allworlds} />
           <Countries countries={this.state.countries} />
           <Users users={this.state.users} />
