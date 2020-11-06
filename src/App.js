@@ -15,7 +15,7 @@ import Totalcovid from './Components/Jeux/covidWorld';
 
 const myheader = new Headers({
   'Content-Type': 'application/x-www-form-urlencoded',
-  });
+  }); 
  const  init = {
   method: 'GET',
   headers: myheader,
@@ -58,17 +58,15 @@ class App extends Component {
 
  
   componentDidMount() {
-    const url = `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=Spider-Man&apikey=04ddb3bee1b32fc932fb3f736f1c389d`;
+    const url = `https://gateway.marvel.com:443/v1/public/events?&apikey=04ddb3bee1b32fc932fb3f736f1c389d`;
     fetch(url,init)
       .then(response => response.json())
       .then(json => {
         const data = json;
         console.log('data api2', data.data.results);
         const comics = data.data.results;
-        const myComics = comics.comics.items;
-        this.setState({ myComics: myComics });
         this.setState({ comics: comics });
-       console.log("mycomics", myComics);
+       console.log("mycomics", comics);
       })
       .catch(error => console.log(error)) // error json
       .catch(error => console.log(error)); // error API

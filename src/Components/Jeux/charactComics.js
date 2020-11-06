@@ -6,22 +6,14 @@ const Comics = ({ comics, myComics }) => {
         <div>
             <center><h1>Characters Comics Events</h1></center>
             {comics.map((comic) => (
-                <div className="card">
-                    <div className="card-body">
+                <div className="myCard">
+                    {/* <div className="comic_Name">
                         <h1>{comic.name}</h1>
-                        <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="poster" />
                         <p>{comic.description}</p>
-                        <p>{comic.comics.items.name}</p>
-                    </div>
+                    </div> */}
+                    <img src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} alt="poster" />
                 </div>
             ))};
-            {/* {myComics.map((myComic) => (
-                <div>
-                    <h1>{myComics.name}</h1>
-                    <img src={`${myComic.resourceURI}`} alt="post" />
-                </div>
-
-            ))} */}
         </div>
     )
 };
