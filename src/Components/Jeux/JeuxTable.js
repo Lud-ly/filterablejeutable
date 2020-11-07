@@ -41,40 +41,7 @@ class JeuxTable extends Component{
             lastCategory  = jeu.category;
             
         });
-        this.props.jeux1.forEach(jeu => {
-            // console.log(this.props.jeux1,"jeux1 Ps4 est dans jeuxTable")
-             if (jeu.name.toLowerCase('toLowerCase').indexOf(filterText) === -1){
-               return;
-             }
-             if(!ps4Only && jeu.stocked){
-                 return;
-             }
-             if(jeu.category !== lastCategory){
-                 rows.push(<JeuxCategory category={jeu.category}/>)
-             }
-                 
-             rows.push(<JeuxRow jeu={jeu}/>)
-             lastCategory  = jeu.category;
-             
-         });
-         this.props.jeux2.forEach(jeu => {
-           // console.log(this.props.jeux2,"jeux2 NEOGEO est dans jeuxTable")
-            if (jeu.name.toLowerCase('toLowerCase').indexOf(filterText) === 1){
-              return;
-            }
-            if(!neoOnly && jeu.stocked){
-                return;
-            }
-            if(jeu.category !== lastCategory){
-                rows.push(<JeuxCategory category={jeu.category}/>)
-            }
-                
-            rows.push(<JeuxRow key={jeu.name} jeu={jeu}/>)
-            lastCategory  = jeu.category;
-            
-        });
         
-      //rows.push(<JeuxRow key="2"/>);
         
         return(
             <div><span >-Choose your Console-</span>
