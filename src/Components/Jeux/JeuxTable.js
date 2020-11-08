@@ -11,8 +11,8 @@ class JeuxTable extends Component{
     constructor (props){
         super(props);
         console.log("liste des jeux dans jeuxtable" ,props.jeux)
-        console.log("liste des jeux dans jeuxtable" ,props.jeux1)
-        console.log("liste des jeux dans jeuxtable" ,props.jeux2)
+        // console.log("liste des jeux dans jeuxtable" ,props.jeux1)
+        // console.log("liste des jeux dans jeuxtable" ,props.jeux2)
     }
     
     render(){

@@ -85,6 +85,11 @@ class App extends Component {
     JEUX.push({ category: 'Sport', name: 'ShaunWhite', Année: '2010', stocked: true, genre: 'SkateBoard', age: '12+', console: 'Ps3' });
     JEUX.push({ category: 'Sport', name: 'NBA2K010', Année: '2009', stocked: true, genre: 'Basket', age: '3+', console: 'Ps3' });
     JEUX.push({ category: 'Sport', name: 'SSX', Année: '2012', stocked: true, genre: 'Snowboard', age: '3+', console: 'Ps3' });
+    JEUX.push({ category: 'Sport', name: 'Fifa09', Année: '2008', stocked: true, genre: 'Football', age: '3+', console: 'Ps3' });
+    JEUX.push({ category: 'Sport', name: 'Fifa13', Année: '2012', stocked: true, genre: 'Football', age: '3+', console: 'Ps3' });
+    JEUX.push({ category: 'Sport', name: 'FIFA20', Année: '2019', stocked: true, genre: 'Football', age: '3+', console: 'Ps4' });
+    JEUX.push({ category: 'Sport', name: 'FIFA18', Année: '2017', stocked: true, genre: 'Football', age: '3+', console: 'Ps4' });
+    JEUX.push({ category: 'Sport', name: 'FarmingSimulator17', Année: '2016', stocked: true, genre: 'Simulator', age: '3+', console: 'Ps4' });
     JEUX.push({ category: 'Aventure', name: 'TombRaider', Année: '2008', stocked: true, genre: 'Action', age: '18+', console: 'Ps3' });
     JEUX.push({ category: 'Aventure', name: 'DeadSpace3', Année: '2013', stocked: true, genre: 'Action', age: '18+', console: 'Ps3' });
     JEUX.push({ category: 'Aventure', name: 'RedDeadR', Année: '2010', stocked: true, genre: 'Action', age: '18+', console: 'Ps3' });
@@ -92,8 +97,6 @@ class App extends Component {
     JEUX.push({ category: 'Course', name: 'GranTurismo5', Année: '2010', stocked: true, genre: 'Simulator', age: '3+', console: 'Ps3' });
     JEUX.push({ category: 'Course', name: 'DirtColinMcRae', Année: '2006', stocked: true, genre: 'rallye', age: '12+', console: 'Ps3' });
     JEUX.push({ category: 'Course', name: 'MotorStorm', Année: '2006', stocked: true, genre: 'Crash', age: '12+', console: 'Ps3' });
-    JEUX.push({ category: 'Sport', name: 'Fifa09', Année: '2008', stocked: true, genre: 'Football', age: '3+', console: 'Ps3' });
-    JEUX.push({ category: 'Sport', name: 'Fifa13', Année: '2012', stocked: true, genre: 'Football', age: '3+', console: 'Ps3' });
     JEUX.push({ category: 'Sport', name: 'TopSpin3', Année: '2008', stocked: true, genre: 'Tennis', age: '3+', console: 'Ps3' });
     JEUX.push({ category: 'Combat', name: 'Marvel-VS-Capcom', Année: '2011', stocked: true, genre: 'Manga', age: '12+', console: 'Ps3' });
     JEUX.push({ category: 'Aventure', name: 'Batman ArkamCity', Année: '2011', stocked: true, genre: 'Action', age: '16+', console: 'Ps3' });
@@ -103,9 +106,6 @@ class App extends Component {
     JEUX.push({ category: 'Aventure', name: 'Sonic Unleashed', Année: '2008', stocked: true, genre: 'Action', age: '7+', console: 'Ps3' });
     JEUX.push({ category: 'Shoot', name: 'TimeCrisis RazingStorm', Année: '200', stocked: true, genre: 'Action', age: '16+', console: 'Ps3' });
     JEUX.push({ category: 'Aventure', name: 'Lego Batman2', Année: '2012', stocked: true, genre: 'Action', age: '12+', console: 'Ps3' });
-    JEUX.push({ category: 'Sport', name: 'FIFA20', Année: '2019', stocked: true, genre: 'Football', age: '3+', console: 'Ps4' });
-    JEUX.push({ category: 'Sport', name: 'FIFA18', Année: '2017', stocked: true, genre: 'Football', age: '3+', console: 'Ps4' });
-    JEUX.push({ category: 'Sport', name: 'FarmingSimulator17', Année: '2016', stocked: true, genre: 'Simulator', age: '3+', console: 'Ps4' });
     JEUX.push({ category: 'Aventure', name: 'Ratchet&Clank', Année: '2016', stocked: true, genre: 'Action', age: '3+', console: 'Ps4' });
     JEUX.push({ category: 'Aventure', name: 'Fallout4', Année: '2015', stocked: true, genre: 'Action', age: '18+', console: 'Ps4' });
     JEUX.push({ category: 'Aventure', name: 'HorizonZeroDawn', Année: '2017', stocked: true, genre: 'Action', age: '16+', console: 'Ps4' });

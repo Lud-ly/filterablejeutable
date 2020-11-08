@@ -9,7 +9,7 @@ class Jeuxcategory extends Component{
     render(){
         return(
            <tr>
-               <th colSpan="2">
+               <th colSpan="5">
                   {this.props.category}
                </th>
            </tr> 
