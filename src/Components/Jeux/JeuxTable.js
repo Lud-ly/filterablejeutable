@@ -10,16 +10,14 @@ import JeuxRow from './JeuxRow';
 class JeuxTable extends Component{
     constructor (props){
         super(props);
-        console.log("liste des jeux dans jeuxtable" ,props.jeux)
-        // console.log("liste des jeux dans jeuxtable" ,props.jeux1)
-        // console.log("liste des jeux dans jeuxtable" ,props.jeux2)
+        console.log("liste des jeux dans jeuxtable" ,props.jeux);
     }
     
     render(){
         const filterText = this.props.filterText;
         const ps3Only = this.props.ps3Only;
-        const ps4Only = this.props.ps4Only;
-        const neoOnly = this.props.neoOnly;
+          const ps4Only = this.props.ps4Only;
+          const neoOnly = this.props.neoOnly;
         
 
         let lastCategory;
@@ -29,8 +27,13 @@ class JeuxTable extends Component{
             if (jeu.name.toLowerCase('toLowerCase').indexOf(filterText) === -1){
               return;
             }
-           
              if(!ps3Only && jeu.stocked){
+                return;
+            }
+            if(!ps4Only && jeu.stocked){
+                return;
+            }
+            if(!neoOnly && jeu.stocked){
                 return;
             }
             if(jeu.category !== lastCategory){
@@ -41,7 +44,9 @@ class JeuxTable extends Component{
             lastCategory  = jeu.category;
             
         });
+      
         
+      //rows.push(<JeuxRow key="2"/>);
         
         return(
             <div><span >-Choose your Console-</span>
